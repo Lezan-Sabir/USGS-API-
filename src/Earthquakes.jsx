@@ -4,7 +4,7 @@ import { useParams } from 'react-router';
 
 const Earthquakes = props => {
     const {eventid}= useParams();
-    const [location, setLocation] = useState(eventid);
+    const [properties, setProperties] = useState(eventid);
     const [earthquake, setWeather] = useState({
         place: "10km WNW of The Geysers, CA",
         time: 1642025636650,
@@ -31,7 +31,7 @@ const Earthquakes = props => {
 
     useEffect(() => {
         updateEarthquake()
-    }, [location])
+    }, [properties])
 
     return (
         
