@@ -3,6 +3,7 @@
 import Home from './Home';
 import {Link} from "react-router-dom";
 import {Routes, Route} from "react-router";
+import Earthquakes from './Earthquakes';
 
 function App() {
   return (
@@ -14,7 +15,7 @@ function App() {
       </header>
       <Routes>
         <Route path="/" element={<Home/>}></Route>
-        <Route path='Details:eventid' element={<Earthquakes/>}></Route>
+        <Route path='/Details:eventid' element={<Earthquakes/>}></Route>
       </Routes>
 
     </div>

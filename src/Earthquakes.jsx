@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
-import useParams from 'react-router';
+import { useParams } from 'react-router';
 
 
-const Earthquake = props => {
+const Earthquakes = props => {
     const {eventid}= useParams();
     const [location, setLocation] = useState(eventid);
     const [earthquake, setWeather] = useState({
@@ -17,6 +17,7 @@ const Earthquake = props => {
         
         const res = await fetch('https: earthquake.usgs.gov/fdsnws/event/1/query?format=geojson&starttime=2022-01-01&endtime=2022-12-01&limit=10')
         const data = await res.json();
+        
         const newEarthquake = {
             place: data.properties.place,
             time: data.properties.time,
@@ -33,6 +34,7 @@ const Earthquake = props => {
     }, [location])
 
     return (
+        
         <div className="weather-container">
             <div className='search-area'>
                
@@ -48,4 +50,4 @@ const Earthquake = props => {
     )
 }
 
-export default Earthquake;
+export default Earthquakes;

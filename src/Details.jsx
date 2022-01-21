@@ -12,8 +12,8 @@ const ear = [
     
 ];
 
-export default proj;
-const Projects= props =>
+export default ear;
+const Details= props =>
 {
   return(
 ear.map(el=>{
